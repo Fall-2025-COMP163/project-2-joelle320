@@ -1,7 +1,7 @@
 """
 COMP 163 - Project 2: Character Abilities Showcase
-Name: [Your Name Here]
-Date: [Date]
+Name: Lauren Roberson
+Date: 12 November, 2025
 
 AI Usage: [Document any AI assistance used]
 Example: AI helped with inheritance structure and method overriding concepts
@@ -62,6 +62,10 @@ class Character:
     def __init__(self, name, health, strength, magic):
         """Initialize basic character attributes"""
         # TODO: Set the character's name, health, strength, and magic
+        self.name = name
+        self.health = health
+        self.strength = strength
+        self.magic = magic
         # These should be stored as instance variables
         pass
         
