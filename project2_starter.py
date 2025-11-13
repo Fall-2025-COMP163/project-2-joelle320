@@ -231,6 +231,7 @@ class Rogue(Player):
         """
         # TODO: Call super().__init__() with rogue-appropriate stats
         # Suggested stats: health=90, strength=12, magic=10
+        super().__init__(name, "Rogue", 90, 12, 10)
         pass
         
     def attack(self, target):
@@ -241,6 +242,15 @@ class Rogue(Player):
         # TODO: Implement rogue attack
         # Could add a chance for critical hit (double damage)
         # Hint: use random.randint(1, 10) and if result <= 3, it's a crit
+        import random
+        crit_chance = random.randint(1, 10)
+        if crit_chance <= 3:
+            damage = self.strength * 2
+            print(f"{self.name} lands a CRITICAL HIT!")
+        else:
+            damage = self.strength
+        target.take_damage(damage)
+        print(f"{self.name} attacks {target.name} for {damage} damage!")
         pass
         
     def sneak_attack(self, target):
@@ -249,6 +259,9 @@ class Rogue(Player):
         """
         # TODO: Implement sneak attack
         # Should always do critical damage
+        damage = self.strength * 2
+        target.take_damage(damage)
+        print(f"{self.name} performs a Sneak Attack on {target.name} for {damage} damage!")
         pass
 
 class Weapon:
@@ -262,6 +275,8 @@ class Weapon:
         Create a weapon with a name and damage bonus.
         """
         # TODO: Store weapon name and damage bonus
+        self.name = name
+        self.damage_bonus = damage_bonus
         pass
         
     def display_info(self):
@@ -269,6 +284,7 @@ class Weapon:
         Display information about this weapon.
         """
         # TODO: Print weapon name and damage bonus
+        print(f"Weapon: {self.name}, Damage Bonus: {self.damage_bonus}")
         pass
 
 # ============================================================================
