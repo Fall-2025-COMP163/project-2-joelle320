@@ -192,6 +192,7 @@ class Mage(Player):
         """
         # TODO: Call super().__init__() with mage-appropriate stats
         # Suggested stats: health=80, strength=8, magic=20
+        super().__init__(name, "Mage", 80, 8, 20)
         pass
         
     def attack(self, target):
@@ -201,6 +202,9 @@ class Mage(Player):
         """
         # TODO: Implement mage attack
         # Should use self.magic for damage calculation instead of strength
+        damage = self.magic
+        target.take_damage(damage)
+        print(f"{self.name} casts a spell on {target.name} for {damage} damage!")
         pass
         
     def fireball(self, target):
@@ -209,6 +213,9 @@ class Mage(Player):
         """
         # TODO: Implement fireball spell
         # Should do magic-based damage with bonus
+        damage = self.magic + 10
+        target.take_damage(damage)
+        print(f"{self.name} hurls a Fireball at {target.name} for {damage} damage!")
         pass
 
 class Rogue(Player):
