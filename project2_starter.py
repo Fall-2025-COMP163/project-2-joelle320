@@ -80,6 +80,8 @@ class Character:
         # TODO: Implement basic attack
         # Damage should be based on self.strength
         # Use target.take_damage(damage) to apply damage
+        target.take_damage(self.strength)
+        print(f"{self.name} attacks {target.name} for {self.strength} damage!")
         pass
         
     def take_damage(self, damage):
@@ -90,6 +92,8 @@ class Character:
         # TODO: Implement taking damage
         # Reduce self.health by damage amount
         # Make sure health doesn't go below 0
+        self.health -= damage
+        if self.health < 0: self.health = 0
         pass
         
     def display_stats(self):
@@ -98,6 +102,10 @@ class Character:
         """
         # TODO: Print character's name, health, strength, and magic
         # Make it look nice with formatting
+        print(f"Character: {self.name}")
+        print(f" Health: {self.health}")
+        print(f" Strength: {self.strength}")
+        print(f" Magic: {self.magic}")
         pass
 
 class Player(Character):
@@ -114,6 +122,9 @@ class Player(Character):
         # TODO: Call super().__init__() with the basic character info
         # TODO: Store the character_class (like "Warrior", "Mage", etc.)
         # TODO: Add any other player-specific attributes (level, experience, etc.)
+        super().__init__(name, health, strength, magic)
+        self.character_class = character_class
+        self.level = 1
         pass
         
     def display_stats(self):
@@ -123,6 +134,9 @@ class Player(Character):
         """
         # TODO: Call the parent's display_stats method using super()
         # TODO: Then print additional player info like class and level
+        super().display_stats()
+        print(f" Class: {self.character_class}")
+        print(f" Level: {self.level}")
         pass
 
 class Warrior(Player):
