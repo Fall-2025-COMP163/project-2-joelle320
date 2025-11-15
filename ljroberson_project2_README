@@ -1,0 +1,76 @@
+# Project 2 – Character Abilities Showcase
+
+# Author
+- Lauren Roberson – COMP 163, Fall 2025
+
+# Description
+
+- This project implements a multi-level inheritance system in Python using the required COMP 163 classes (Character, Player, Warrior, Mage, Rogue) along with the provided SimpleBattle class to demonstrate character abilities, polymorphism, method overriding, and composition.
+
+- I also added several Fruits Basket–themed bonus character classes and special abilities to expand creativity while keeping the required starter structure unchanged.
+
+# Character System (Required Features):
+
+- Character: Base class storing name, health, strength, and magic.
+
+- Player: Extends Character and adds class type and level tracking.
+
+- Warrior, Mage, Rogue: Override attack behavior and include special abilities such as Power Strike, Fireball, and Sneak Attack.
+
+- SimpleBattle: Provided test class that simulates a basic one-round battle.
+
+# Bonus Creative Features:
+
+    - Added three Fruits Basket–inspired character classes:
+
+    - TohruHonda – supportive healer with comfort_heal()
+
+    - KyoSohma – aggressive fighter with cat_form_frenzy()
+
+    - YukiSohma – elegant fighter with snow_blossom()
+
+    - Added themed weapon classes (OnigiriCharm, CatClaws, RatFan) to extend the composition system.
+
+- Added additional special abilities to base classes (Shield Bash, Arcane Shield, Poison Strike).
+
+All bonus content uses only inheritance and composition concepts covered in class.
+
+# How It Works
+
+- Inheritance:
+Each class builds upon the previous one—Character → Player → (Warrior, Mage, Rogue)—to demonstrate multi-level inheritance.
+
+- Method Overriding:
+Warrior, Mage, and Rogue each override attack() to produce unique behaviors consistent with their roles.
+
+- Special Abilities:
+Each required class includes an additional special move (e.g., power_strike, fireball, sneak_attack), and bonus classes include Fruits Basket–inspired abilities.
+
+- Bonus Classes:
+Tohru, Kyo, and Yuki inherit from Player and customize stats and abilities to fit their anime personalities.
+
+- Weapons:
+Weapon is a standalone class demonstrating composition. The bonus weapons extend this theme through simple, themed subclasses.
+
+- Battle Testing:
+The provided SimpleBattle class can be used to run simple combat simulations between any two characters to observe polymorphic behavior.
+
+# AI Help
+
+- I used ChatGPT (OpenAI, GPT-5 model, 2025) to:
+    - Clarify inheritance and method overriding concepts
+
+    - Assist with generating balanced bonus character stats and Fruits Basket–themed abilities
+
+    - Help structure the bonus features in a way that does not conflict with automated test cases
+
+    - Revise and format this README for clarity and consistency
+
+MLA Citation:
+- OpenAI. “ChatGPT (GPT-5 Model).” OpenAI, 2025, https://chat.openai.com/.
+
+# How to Run
+
+Open the Project1 folder to access the Python file.
+project2_starter.py
+To View Commits: https://github.com/Fall-2025-COMP163/project-2-joelle320/actions/workflows/classroom.yml

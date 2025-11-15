@@ -3,8 +3,16 @@ COMP 163 - Project 2: Character Abilities Showcase
 Name: Lauren Roberson
 Date: 12 November, 2025
 
-AI Usage: [Document any AI assistance used]
-Example: AI helped with inheritance structure and method overriding concepts
+AI Usage Statement:
+This project received assistance from ChatGPT (GPT-5 model). The AI helped clarify
+inheritance and method overriding concepts, suggested balanced stat values and thematic
+abilities for the bonus Fruits Basket character classes, and provided support in improving
+the readability and organization of the code while ensuring that all required starter
+structures remained unchanged for COMP 163 automated test compatibility.
+- prompted summary from ChatGPT
+
+MLA Citation:
+OpenAI. “ChatGPT (GPT-5 Model).” OpenAI, 2025, https://chat.openai.com/.
 """
 
 # ============================================================================
